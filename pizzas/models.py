@@ -19,4 +19,4 @@ class Topping(models.Model):
         verbose_name_plural = 'toppings'
 
     def __str__(self):
-        return self.namess
+        return self.name
