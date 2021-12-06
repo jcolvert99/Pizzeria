@@ -4,6 +4,6 @@ from . import views
 
 app_name = 'pizzas'
 
-urlpatters = [
+urlpatterns = [
     path('',views.index, name='index'),
 ]
