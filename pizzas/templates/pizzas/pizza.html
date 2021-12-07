@@ -3,9 +3,19 @@
 {% block content %}
 
 
-<p>Pizza: {{ pizza }}</p>
-<p></p>
+<p>{{ pizza }} Pizza</p>
+{% if pizza.name == 'Hawaiian' %}
+<img src="https://www.jessicagavin.com/wp-content/uploads/2020/07/hawaiian-pizza-16-1200.jpg" width='200' height='200'>
+{% elif pizza.name == 'Meat Lovers' %}
+<img src="https://www.thespruceeats.com/thmb/P35kji9UfT9JndhurFbPRb1Tuyw=/2998x1999/filters:fill(auto,1)/aqIMG_4568fhor-0b89dc5c8c494ee9828ed29805791c5a.jpg" width='260' height='170'>
+{% elif pizza.name == 'Supreme' %}
+<img src="https://restaurantclicks.com/wp-content/uploads/2021/09/tasty-supreme-pizza-with-olives-peppers-onions-and-sausage.jpg" width='250' height='200'>
+{% elif pizza.name == 'Margherita' %}
+<img src="https://www.acouplecooks.com/wp-content/uploads/2018/10/Margherita-Pizza-018.jpg" width='200' height='230'>
+{% endif %}
 
+
+<br>
 <p>Toppings:</p>
 <ul>
    {% for t in toppings %}
@@ -17,9 +27,9 @@
     <li>There are no toppings for this pizza.</li>
     {% endfor %}
 </ul>
-<p></p>
 
 
+<br>
 <p>Comments:</p>
 <ul>
     {% for c in comments %}
