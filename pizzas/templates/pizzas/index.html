@@ -1,11 +1,14 @@
 {% extends "pizzas/base.html" %}
 
-{% block content %}
 
-<p>
-    Pizzeria shows you a list of available pizzas, lists all toppings associated with each pizza, and allows the user
-    to post comments about any particular pizza.
-    
-</p>
+{% block page_header %}
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaUqcvw97mVkmsMIckgKrpCo21PKE8028lOg&usqp=CAU">
+<div class="jumbotron">
+    <h1 class="display-3">Fast. Fresh. Delicious.</h1>
+    <p class="lead">Pizzeria shows you a list of available pizzas, lists all toppings associated with each pizza, and allows the user
+        to post comments about any particular pizza.</p>
+    <a class="btn btn-lg btn-primary" href="{% url 'pizzas:pizzas' %}" role="button">View the menu &raquo;</a>
+</div>
+<img src="https://totos.com/wp-content/uploads/hero-Totos-Pizzeria.jpg" width='900' height='500'>
 
-{% endblock content %}
+{% endblock page_header %}

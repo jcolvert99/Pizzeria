@@ -3,14 +3,14 @@
 {% block content %}
 
 
-<p>Pizzas</p>
+<h2><p>Pizzas</p></h2>
 
 <ul>
    {% for p in pizzas %}
 
-    <li>
+    <li><h3>
         <a href="{% url 'pizzas:pizza' p.id %}">{{ p }}</a>
-    </li>
+    </h3></li>
 
     {% empty %}
     <li>No pizzas have been added yet</li>

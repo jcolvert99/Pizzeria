@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<p>{{ pizza }} Pizza</p>
+<h3>{{ pizza }} Pizza</h3>
 {% if pizza.name == 'Hawaiian' %}
 <img src="https://www.jessicagavin.com/wp-content/uploads/2020/07/hawaiian-pizza-16-1200.jpg" width='200' height='200'>
 {% elif pizza.name == 'Meat Lovers' %}
@@ -16,7 +16,8 @@
 
 
 <br>
-<p>Toppings:</p>
+<br>
+<h4>Toppings:</h4>
 <ul>
    {% for t in toppings %}
    <li>
@@ -30,7 +31,7 @@
 
 
 <br>
-<p>Comments:</p>
+<h4>Comments:</h4>
 <ul>
     {% for c in comments %}
     <li>
