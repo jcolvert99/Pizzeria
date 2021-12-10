@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',include('pizzas.urls')),
+    path('admin/', admin.site.urls),  #use '' because referencing homepage
+    path('',include('pizzas.urls')),  #include all urls in the mainapp and users folders
 ]

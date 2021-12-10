@@ -6,11 +6,11 @@
 <h2><p>Pizzas</p></h2>
 
 <ul>
-   {% for p in pizzas %}
+   {% for p in pizzas %}    <!--Calls the key of the pizzas dictionary in views.py, iterates throguh the dict-->
 
     <li><h3>
         <a href="{% url 'pizzas:pizza' p.id %}">{{ p }}</a>
-    </h3></li>
+    </h3></li>           <!--don't have to write p.name because of the str method in models.py-->
 
     {% empty %}
     <li>No pizzas have been added yet</li>

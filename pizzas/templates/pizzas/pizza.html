@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<h3>{{ pizza }} Pizza</h3>
+<h3>{{ pizza }} Pizza</h3>    <!--pulled from context dictionary in views (pizza is the key)-->
 {% if pizza.name == 'Hawaiian' %}
 <img src="https://www.jessicagavin.com/wp-content/uploads/2020/07/hawaiian-pizza-16-1200.jpg" width='200' height='200'>
 {% elif pizza.name == 'Meat Lovers' %}
@@ -19,9 +19,9 @@
 <br>
 <h4>Toppings:</h4>
 <ul>
-   {% for t in toppings %}
+   {% for t in toppings %}     <!--Calls the key of the toppings dictionary in views.py, iterates throguh the dict-->
    <li>
-       <p>{{ t.name|linebreaks }}</p>
+       <p>{{ t.name|linebreaks }}</p>   <!--name is attribute of topping model-->
    </li>
 
     {% empty %}

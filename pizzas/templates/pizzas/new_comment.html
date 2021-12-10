@@ -4,12 +4,14 @@
 
 
 <p><a href="{% url 'pizzas:pizza' pizza.id %}">{{ pizza }}</a></p>
+<!--includes pizza.id value in the URL so the view function can associate the new comment with the correct pizza-->
+<!--user can click on this to get back to the pizza they were in-->
 
 <p>Add a new comment:</p>
 
 <form action="{% url 'pizzas:new_comment' pizza.id %}" method='post'>
-    {% csrf_token %}
-    {{ form.as_p }}
+    {% csrf_token %}   <!--prevents SQL injection hacks-->
+    {{ form.as_p }}    <!--don't have to write out each field, just load form-->
 
     <button name="submit">Add comment</button>
 
