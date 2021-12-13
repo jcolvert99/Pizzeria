@@ -49,7 +49,7 @@ db.sqlite3 is the back-end database
 
 Making pages- consists of three stages:
     1. defining URLs (add the URL to the urls file)
-    2. writing views (define a topics function in the views file)
+    2. writing views (define a topics function in the views file)- INTERACTS WITH THE WEBPAGE
     3. writing templates
 each URL maps to a view which uses a template to structure the page
     - process- url calls the view, view calls the databse and retrieves info, view assigns data to a template, template is shown on browser
